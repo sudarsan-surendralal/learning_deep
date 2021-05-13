@@ -7,6 +7,7 @@ else
     kernel="python3"
 fi;
 
+# Iterate over notebooks
 i=0;
 for notebook in $(find . -name "*.ipynb"); do 
     papermill ${notebook} ${notebook%.*}-out.${notebook##*.} -k $kernel || i=$((i+1));
