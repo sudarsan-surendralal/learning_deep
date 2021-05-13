@@ -2,5 +2,6 @@ channels:
   - conda-forge
 dependencies:
   - jupyter
+  - matplotlib
   - papermill
   - tensorflow
