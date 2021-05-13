@@ -20,10 +20,6 @@ jobs:
         channel-priority: strict
         environment-file: .ci-support/environment.yml
         auto-activate-base: false
-    - name: Setup
-      shell: bash -l {0}
-      run: |
-        pip install --no-deps .
     - name: Tests
       shell: bash -l {0}
       run: ./.ci-support/run_notebooks.sh
