@@ -18,7 +18,7 @@ jobs:
         auto-update-conda: true
         python-version: 3.9
         channel-priority: strict
-        environment-file: .ci_support/environment.yml
+        environment-file: .ci-support/environment.yml
         auto-activate-base: false
     - name: Setup
       shell: bash -l {0}
@@ -26,4 +26,4 @@ jobs:
         pip install --no-deps .
     - name: Tests
       shell: bash -l {0}
-      run: ./.ci_support/build_notebooks.sh
+      run: ./.ci-support/run_notebooks.sh
